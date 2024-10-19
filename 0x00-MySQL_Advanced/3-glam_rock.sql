@@ -8,7 +8,10 @@
 --     Your script can be executed on any database
 
 
-SELECT band_name, (2022 - split) AS lifespan
+SELECT band_name,
+CASE 
+           WHEN split IS NULL THEN 2022 - formed
+           ELSE split - formed
+       END AS lifespan
 FROM metal_bands
-WHERE style = 'Glam rock'
-ORDER BY lifespan DESC;
+WHERE style = 'Glam rock' OR style LIKE '%Glam rock%';
