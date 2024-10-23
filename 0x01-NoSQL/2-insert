@@ -1,0 +1,1 @@
+db.my_db.insert({"name": "Holberton school"})
