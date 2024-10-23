@@ -13,6 +13,6 @@ def update_topics(mongo_collection, name, topics):
     """
 
     mongo_collection.find().update_many(
-        {name: name}, {"$set": {"topics": topics}}
+        {"name": name}, {"$set": {"topics": topics}}
         )
     
