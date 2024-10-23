@@ -1,1 +1,2 @@
-db.my_db.drop({"name": "Holberton school"})
+// a script that    
+db.school.deleteMany({"name": "Holberton school"})

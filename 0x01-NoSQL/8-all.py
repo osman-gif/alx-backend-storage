@@ -1,5 +1,7 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
-import mongoengine
+"""Python function that lists all documents in a collection"""
 
-mongoengine.Date
+
+def list_all(mongo_collection):
+    return mongo_collection.find()
